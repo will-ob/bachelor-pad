@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# directory of this script
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd `~`
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+red=$(tput setaf 1)
+
+state=( green yellow red )
+
+function message {
+  color=${!state[$1]}
+  printf '%30s\t%s\n' "${bold}${color}$file" "${normal}$2" 
+}
+
+for file in $DIR/*
+do
+  file=$(basename $file)
+  target="$HOME/.${file}"
+
+  # ignore this file and .git dir
+
+  [ $file = `basename $0` ] && continue
+  [ $file = '.git' ] && continue
+
+  # target exists for reals
+  [ -f "$target" ] && [ ! -L "$target" ] && message 2 "file exists and is not a symlink" && continue
+
+  # $target already linked
+  if [ -L "$target" ]
+  then
+    existing=`ls -l $target | awk '{print $11}'`
+    if [ $existing = $file ]
+    then
+      # to this dir
+      message 0 "set correctly"
+      continue
+    else
+      # to a different dir
+      message 1 "already linked to $existing"
+      continue
+    fi
+  fi
+
+  # symlink created
+  ln -s $DIR/$file ".$file"
+  message 0 "file linked"
+done
