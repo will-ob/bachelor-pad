@@ -18,3 +18,10 @@ Files
 * `.dotjs` to take over the internet
 * `.bin` handy scripts
 
+Chainsaw Uninstall
+--------------------
+Warning: removes *all* symlinks in your home directory
+```
+cd ~
+find . -maxdepth 1 -type l -exec rm -f {} \;
+```
