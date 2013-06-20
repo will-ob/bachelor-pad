@@ -17,3 +17,5 @@ REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
 EDITOR=vim
+
+PATH=~/.bin:$PATH

@@ -51,3 +51,14 @@ do
   ln -s $DIR/$file ".$file"
   message 0 "file linked"
 done
+
+# Hub
+cd $DIR/hub
+rvm --create 1.9.3@hub
+bundle install
+rake install prefix=$DIR
+cd ~
+
+# Other Gems
+rvm default do gem install serve gist
+
