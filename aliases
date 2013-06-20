@@ -11,6 +11,7 @@ alias ll='ls -al'
 alias lh='ls -Alh'
 
 # git
+alias git="hub"
 alias g="git"
 alias gci="git pull --rebase && rake && git push"
 

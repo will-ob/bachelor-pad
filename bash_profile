@@ -1,12 +1,5 @@
+#!/usr/bin/env bash
 
-
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-
-if [ -f ~/.aliases ]; then
-   source ~/.aliases
-fi
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 
@@ -24,8 +17,14 @@ else
 
 fi
 
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
 
-alias git="hub"
+if [ -f ~/.aliases ]; then
+   source ~/.aliases
+fi
+
 
 
 

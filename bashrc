@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # colors - sans obfunstication
 BLACK=$(tput setaf 0)
@@ -18,4 +19,4 @@ UNDERLINE=$(tput smul)
 
 EDITOR=vim
 
-PATH=~/.bin:$PATH
+export PATH=~/.bin:$PATH

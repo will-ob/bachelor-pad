@@ -53,10 +53,10 @@ do
 done
 
 # Hub
-cd $DIR/hub
+cd $DIR/lib/hub
 rvm --create 1.9.3@hub
-bundle install
-rake install prefix=$DIR
+rvm 1.9.3@hub do bundle install
+rvm 1.9.3@hub do rake install prefix=$DIR/lib
 cd ~
 
 # Other Gems
