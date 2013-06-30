@@ -9,4 +9,9 @@
 [color]
 	ui = true
 [log]
-	format = oneline
+	decorate = short
+	date = relative
+	abbrevCommit = true
+
+[format]
+	pretty = oneline
