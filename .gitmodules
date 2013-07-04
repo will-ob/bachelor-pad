@@ -1,3 +1,6 @@
 [submodule "hub"]
 	path = lib/hub
 	url = git@github.com:defunkt/hub.git
+[submodule "lib/dotjs-ubuntu"]
+	path = lib/dotjs-ubuntu
+	url = git@github.com:will-ob/dotjs-ubuntu.git

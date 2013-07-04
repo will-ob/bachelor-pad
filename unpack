@@ -2,6 +2,7 @@
 
 # directory of this script
 DIR="$( cd "$( dirname "$0" )" && pwd )"
+source $DIR/bash_profile
 cd `~`
 
 bold=$(tput bold)
@@ -59,6 +60,18 @@ rvm 1.9.3@hub do bundle install
 rvm 1.9.3@hub do rake install prefix=$DIR/lib
 cd ~
 
+# DotJS
+
+cd
+cd $DIR/lib/dotjs-ubuntu
+rvm --create 1.9.3@dotjs
+rvm 1.9.3@dotjs do rake install && google-chrome --install-from-webstore dlnccnmhpmdidoiecanghgienhoglnim
+cd ~
+
 # Other Gems
 rvm default do gem install serve gist
+
+# Crontab
+
+crontab -u will ~/.lib/crontab
 

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rvm 1.9.3@dotjs do $HOME/.lib/dotjs-ubuntu/bin/djsd "$@"
