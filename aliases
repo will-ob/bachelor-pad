@@ -9,6 +9,7 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias ldir="ls -l | egrep '^d'"
 
 # git
 alias git="hub"
