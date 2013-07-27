@@ -20,3 +20,11 @@ UNDERLINE=$(tput smul)
 EDITOR=vim
 
 export PATH=~/.bin:$PATH
+
+export PERL_LOCAL_LIB_ROOT="/home/will/perl5";
+export PERL_MB_OPT="--install_base /home/will/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/will/perl5";
+export PERL5LIB="/home/will/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/will/perl5/lib/perl5";
+export PATH="/home/will/perl5/bin:$PATH";
+
+export RAINBARF="~/.rainbarf.conf";
