@@ -73,6 +73,12 @@ rvm default do gem install serve gist
 # Crontab
 crontab -u will ~/.lib/crontab
 
+# Vundle
+if [ ! "~/.vim/bundle/vundle" ]; then
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+fi
+vim +BundleInstall +qa
+
 # Rainbarf (tmux status line)
 sudo apt-get install cpanminus
 cpanm git://github.com/creaktive/rainbarf.git
