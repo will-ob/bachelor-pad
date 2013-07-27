@@ -84,3 +84,7 @@ sudo apt-get install cpanminus
 cpanm git://github.com/creaktive/rainbarf.git
 sudo cpan -i App::rainbarf
 
+# Keyboard
+sudo cp $DIR/lib/keyboard /etc/default/keyboard
+
+
