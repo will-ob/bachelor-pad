@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 sudo echo "sudo works"
 
+# Get and load rvm if it is not present in the shell
+sudo apt-get install curl
+if [[ $(type -t rvm) != 'function' ]] ; then
+
+  if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+    source "$HOME/.rvm/scripts/rvm"
+  elif [[ -s "/usr/local/rvm/scripts/rvm" ]] ; then
+    source "/usr/local/rvm/scripts/rvm"
+  else
+    curl -L https://get.rvm.io | bash
+    printf "ERROR: An RVM installation was not found.\n"
+  fi
+
+fi
+. $HOME/.bash_profile
+rvm install ruby-1.9.3-p448
+
 # directory of this script
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 git submodule init
@@ -70,12 +87,11 @@ rvm 1.9.3@dotjs do rake install && google-chrome --install-from-webstore dlnccnm
 cd ~
 
 # Other Gems
+. $HOME/.bash_profile
 rvm default do gem install serve gist
 
 # Crontab
 crontab -u will ~/.lib/crontab
-
-source $DIR/bashrc
 
 # Vundle
 if [ ! -d ~/.vim/bundle/vundle ]; then
