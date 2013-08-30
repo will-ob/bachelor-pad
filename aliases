@@ -54,3 +54,6 @@ alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 
 # Forman
 alias fs="bundle exec foreman start"
+
+# Copy/Paste
+xclip="xclip -selection c"
