@@ -12,6 +12,7 @@ alias lh='ls -Alh'
 alias ldir="ls -l | egrep '^d'"
 
 # git
+alias gs="git status"
 alias git="hub"
 alias g="git"
 alias gci="git pull --rebase && rake && git push"
