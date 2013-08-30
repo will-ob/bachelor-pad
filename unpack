@@ -78,10 +78,16 @@ crontab -u will ~/.lib/crontab
 source $DIR/bashrc
 
 # Vundle
-if [ ! "~/.vim/bundle/vundle" ]; then
+if [ ! -d ~/.vim/bundle/vundle ]; then
   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
 vim +BundleInstall +qa
+
+# Vimproc post install
+cd ~/.vim/bundle/vimproc.vim
+make
+cd ~
+
 
 # Rainbarf (tmux status line)
 sudo apt-get install cpanminus
@@ -91,4 +97,11 @@ sudo cpan -i App::rainbarf
 # Keyboard
 sudo cp $DIR/lib/keyboard /etc/default/keyboard
 
+# Live Markdown
+# gem install cause rvm..
+gem install redcarpet pygments.rb
+sudo npm -g install node-gyp
+sudo npm -g install socket.io
+sudo npm -g install instant-markdown-d
+sudo apt-get install xdg-utils
 
