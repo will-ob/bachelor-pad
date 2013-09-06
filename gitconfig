@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	whitespace = tab-in-indent
+	excludesfile = /home/will/.gitignore_global
 [commit]
 	template = /home/will/.gitmessage.txt
 [color]
