@@ -106,6 +106,7 @@ Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'elzr/vim-json'
+Bundle 'digitaltoad/vim-jade'
 
 filetype on
 filetype plugin on
