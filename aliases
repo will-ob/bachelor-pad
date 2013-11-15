@@ -11,6 +11,8 @@ alias ll='ls -al'
 alias lh='ls -Alh'
 alias ldir="ls -l | egrep '^d'"
 
+alias img="eog"
+
 # git
 alias gs="git status"
 alias git="hub"
