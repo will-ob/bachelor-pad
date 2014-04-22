@@ -14,6 +14,7 @@ alias ldir="ls -l | egrep '^d'"
 alias img="eog"
 
 # git
+alias gits="git status"
 alias gs="git status"
 alias git="hub"
 alias g="git"
@@ -59,4 +60,4 @@ alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias fs="bundle exec foreman start"
 
 # Copy/Paste
-xclip="xclip -selection c"
+alias xclip="xclip -selection c"
