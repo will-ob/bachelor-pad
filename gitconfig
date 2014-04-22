@@ -15,4 +15,4 @@
 	abbrevCommit = true
 
 [format]
-	pretty = oneline
+	pretty = %C(yellow)%h\t%Cred%ad\t%Cblue%an\t%Cgreen%d %Creset%s
