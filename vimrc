@@ -106,6 +106,8 @@ Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'elzr/vim-json'
+Bundle 'nono/vim-handlebars'
+Bundle 'godlygeek/tabular'
 
 filetype on
 filetype plugin on
