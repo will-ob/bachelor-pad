@@ -107,6 +107,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'elzr/vim-json'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'nono/vim-handlebars'
+Bundle 'godlygeek/tabular'
 
 filetype on
 filetype plugin on
