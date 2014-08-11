@@ -109,9 +109,24 @@ Bundle 'elzr/vim-json'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'nono/vim-handlebars'
 Bundle 'godlygeek/tabular'
+Bundle 'groenewege/vim-less'
+Bundle 'moll/vim-node'
+Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype on
 filetype plugin on
 
 nnoremap <C-p> :Unite file_rec/async<cr>
 nnoremap <space>/ :Unite grep:.<cr>
+
+" sudo w - write file out with sudo access
+cnoremap sudow w !sudo tee % >/dev/null
+
+" Frequent slips
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
