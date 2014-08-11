@@ -1,3 +1,6 @@
+# Cordova
+alias co='cordova'
+
 # Todo
 alias todo='$EDITOR ~/.todo'
 
