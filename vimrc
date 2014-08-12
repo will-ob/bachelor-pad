@@ -114,6 +114,7 @@ Bundle 'moll/vim-node'
 Bundle 'scrooloose/syntastic'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'skammer/vim-css-color'
 
 filetype on
 filetype plugin on
