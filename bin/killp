@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+echo 'Killing process ' `lsof -t -i:$1` ' on port' $1
 kill `lsof -t -i:$1`
