@@ -4,6 +4,8 @@ alias co='cordova'
 # Todo
 alias todo='$EDITOR ~/.todo'
 
+alias ack='ack-grep'
+
 # Unix
 alias tlf="tail -f"
 alias ln='ln -v'
