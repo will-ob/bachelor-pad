@@ -16,3 +16,5 @@
 
 [format]
 	pretty = %C(yellow)%h\t%Cred%ad\t%Cblue%an\t%Cgreen%d %Creset%s
+[push]
+	default = simple

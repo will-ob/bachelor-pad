@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+mkdir -p /tmp/mkcert
+openssl genrsa -des3 -passout pass:x -out /tmp/mkcert/server.pass.key 2048
+openssl rsa -passin pass:x -in /tmp/mkcert/server.pass.key -out /tmp/mkcert/server.key
+rm /tmp/mkcert/server.pass.key
+openssl req -new -key /tmp/mkcert/server.key -out /tmp/mkcert/server.csr \
+  -subj "/C=US/ST=Massachusettes/L=Boston/O=Me/OU=Department of Departments/CN=$1"
+openssl x509 -req -days 365 -in /tmp/mkcert/server.csr -signkey /tmp/mkcert/server.key -out /tmp/mkcert/server.crt
+mv /tmp/mkcert/* `pwd`
+rm -rf /tmp/mkcert/*
+

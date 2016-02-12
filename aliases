@@ -66,3 +66,7 @@ alias fs="bundle exec foreman start"
 
 # Copy/Paste
 alias xclip="xclip -selection c"
+
+# Ubuntu
+
+alias open="gvfs-open"
